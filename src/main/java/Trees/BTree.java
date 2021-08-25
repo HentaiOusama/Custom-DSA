@@ -49,13 +49,24 @@ public class BTree<Element> {
     private int size = 0;
 
     /**
-     * Constructs an empty BTree with specified order.
+     * Constructs an empty BTree with specified order and {@code null Comparator}.
      *
      * @param order Order of the BTree
      * @throws IllegalArgumentException If the order is less than 2
      */
     public BTree(int order) {
-        this.comparator = null;
+        this(null, order);
+    }
+
+    /**
+     * Constructs an empty BTree with specified order and Comparator.
+     *
+     * @param comparator Comparator that should be used to compare elements
+     * @param order      Order of the BTree
+     * @throws IllegalArgumentException If the order is less than 2
+     */
+    public BTree(Comparator<? super Element> comparator, int order) {
+        this.comparator = comparator;
         if (order > 1) {
             this.order = order;
         } else {
