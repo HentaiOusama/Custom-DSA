@@ -1,7 +1,4 @@
-package com.hentai_productions;
-
-public class Main {
-
+public class MainClass {
     public static void main(String[] args) {
 
     }

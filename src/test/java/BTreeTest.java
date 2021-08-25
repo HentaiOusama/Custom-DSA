@@ -1,4 +1,4 @@
-import com.hentai_productions.Trees.BTree;
+import Trees.BTree;
 
 import java.util.Scanner;
 
